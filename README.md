@@ -2,7 +2,7 @@
 
 <a id="home"></a>
 <p align="center">
-  <img src="assets/logo/Logo.svg" width="300" alt="DwGen Logo.">
+  <img src="assets/logo/Logo.png" width="300" alt="DwGen Logo.">
 </p>
 
 <h1 align="center">
