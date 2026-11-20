@@ -1,2 +1,1 @@
-# Dwpass
-Dwpass
+# DwGen - A Diceware Generator CLI Tool.
