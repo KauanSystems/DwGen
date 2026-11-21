@@ -1,0 +1,19 @@
+# CMakeLists.txt
+
+cmake_minimum_required(VERSION 3.20)
+
+project(dwgen VERSION 0.0.1.5 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/settings.cmake)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/../${PROJECT_NAME}.${PROJECT_VERSION}/")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/../${PROJECT_NAME}.${PROJECT_VERSION}/lib")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/../${PROJECT_NAME}.${PROJECT_VERSION}/lib")
+
+add_subdirectory(core)
+add_subdirectory(cmake)
+add_subdirectory(program)
+
