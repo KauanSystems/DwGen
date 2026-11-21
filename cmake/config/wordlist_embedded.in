@@ -1,0 +1,6 @@
+#pragma once
+#include <string_view>
+
+inline constexpr std::string_view EMBEDDED_WORDLIST = R"WORDLIST_DELIM(
+@WORDLIST_CONTENT@
+)WORDLIST_DELIM";
