@@ -11,6 +11,7 @@ add_library(${LIB_COMM} OBJECT # <---  IMPORTANT  --->
 	command/commands/manifest/manifest.cpp
 	command/commands/system/system.cpp
 	command/commands/generate/generate.cpp
+	command/commands/entropry/entropry.cpp
 )
 
 add_library(${PROJECT_NAME}::Command ALIAS ${LIB_COMM})
