@@ -85,4 +85,43 @@ namespace Core {
 		}
 	} // VerifyFile().
 	
+	bool VerifyWordCount(int wordCount) {
+	    int warningThreshold = 12;
+
+	    if (wordCount <= warningThreshold) {
+		return true;
+	    }
+
+	    std::string response;
+
+	    std::cout
+		<< "\n[Warning]"
+		<< "\nYou requested a Diceware passphrase with " << wordCount << " words."
+		<< "\nThis is unusually long and may be slow to generate or hard to store. Are you sure? (Y/n): ";
+
+	    std::getline(std::cin, response);
+
+	    if (response.empty()) {
+		response = "y";
+	    }
+
+	    std::transform(
+		response.begin(),
+		response.end(),
+		response.begin(),
+		[](unsigned char c) {
+		    return static_cast<char>(std::tolower(c));
+		}
+	    );
+
+	    bool confirmed = (response == "y" || response == "yes");
+
+	    if (!confirmed) {
+		std::cout << "\nOperation cancelled.\n\n";
+		std::exit(0);
+	    }
+
+	    return confirmed;
+	} // VerifyWordCount();
+
 } // namespace Core.
