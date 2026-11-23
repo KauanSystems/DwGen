@@ -59,7 +59,7 @@ A high-performance, security-focused command-line interface (CLI) tool for gener
 
 <div align="center">
 
-[Home](#home) ·
+[Home](#home) ···
 
 </div> <br><br>
 
